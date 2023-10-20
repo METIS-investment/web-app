@@ -58,19 +58,11 @@ export default function Header() {
 
                 {
                     sites.map((site) => (
-                        <Link to={site.href}>{site.name}</Link>
+                        <a href="#" className="text-sm px-4 font-semibold leading-6 text-gray-900">
+                             <Link to={site.href}>{site.name}</Link>
+                        </a>
                     ))
                 }
-
-                    <a href="#" className="text-sm font-semibold leading-6 text-gray-900">
-                        Features
-                    </a>
-                    <a href="#" className="text-sm font-semibold leading-6 text-gray-900">
-                        Marketplace
-                    </a>
-                    <a href="#" className="text-sm font-semibold leading-6 text-gray-900">
-                        Company
-                    </a>
 
                 <div className="hidden lg:flex lg:flex-1 lg:justify-end">
                     <a href="#" className="text-sm font-semibold leading-6 text-gray-900">
