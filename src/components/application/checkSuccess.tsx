@@ -30,7 +30,7 @@ const CheckSuccess = (props: Props) => {
 
 
         auth.currentUser?.getIdToken().then(function (idToken) {
-            fetch('http://127.0.0.1:5000/company/register', {
+            fetch('https://api.metis-investment.com/company/register', {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
