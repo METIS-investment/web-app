@@ -26,7 +26,7 @@ export default function Footer() {
     return (
     <div>
       {isMobile ? (
-        <div className="flex flex-col items-center sm:p-20 justify-center flex-wrap text-xs sm:text-base">
+        <div className="flex flex-col items-center py-10 sm:p-20 justify-center flex-wrap text-xs sm:text-base">
         <a className="md:mx-3">METIS Investment</a>
         <a className="md:mx-3">since 2023</a>
         <a className="md:mx-3">Privacy Policy</a>
