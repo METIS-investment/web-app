@@ -7,7 +7,7 @@ import Philosophy from './pages/philosophy';
 import Login from './pages/login';
 import { auth } from './pages/firebase';
 import Footer from "./components/footer";
-
+import Statistics from "./pages/statistics";
 
 
 function App() {
@@ -31,6 +31,7 @@ function App() {
             <Routes>
                 <Route index element={<Home />} />
                 <Route path="apply" element={<Apply login={login}/>} />
+                <Route path="statistics" element = {<Statistics />} />
                 <Route path="philosophy" element={<Philosophy />} />
                 <Route path="login" element={<Login login={login} setLogin={setLogin} />} />
             </Routes>
