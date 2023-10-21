@@ -11,6 +11,14 @@ const handleSignIn = (setLogin: any, nav: any) => {
       .then((userCredential) => {
         // Signed up 
         const user = userCredential.user;
+          // @ts-ignore
+          auth.currentUser.getIdToken(/* forceRefresh */ true).then(function(idToken) {
+              // Send token to your backend via HTTPS
+              console.log(idToken);
+              // ...
+          }).catch(function(error) {
+              // Handle error
+          });
         setLogin(true);
         nav('/');
       })      
@@ -54,4 +62,3 @@ export default function Example({login, setLogin}: {login: boolean, setLogin: an
       </>
     )
   }
-  
