@@ -7,7 +7,7 @@ const FirstBlock = () => {
                     Elevating Growth, Empowering Tomorrow.
                 </h1>
                 <p className="mt-6 text-lg leading-8 text-gray-600">
-                    We are supporting growing companies in developing countries. Here is what they say:
+                    Unlocking potential and enabeling groth all over the world.
                 </p>
                 <div className="mt-10 flex items-center justify-center gap-x-6">
                     <CustomButton text="Apply Now!" destination="apply" />
