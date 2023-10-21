@@ -3,6 +3,7 @@ import LocationForm from "../components/application/locationForm";
 import ValueForm from "../components/application/valueForm";
 import CompanyForm from "../components/application/companyForm";
 import {useEffect, useState} from "react";
+import CheckSuccess from "../components/application/checkSuccess";
 
 
 export default function Apply({login}: {login: boolean}) {
@@ -19,10 +20,11 @@ export default function Apply({login}: {login: boolean}) {
     zip: "",
     companyname: "",
     creationdate: "",
-    assets: 0,
-    liabilities: 0,
-    profit: 0,
-    revenue: 0
+    year1: [-1,-1,-1,-1,-1],
+    year2: [-1,-1,-1,-1,-1],
+    year3: [-1,-1,-1,-1,-1],
+    year4: [-1,-1,-1,-1,-1],
+    year5: [-1,-1,-1,-1,-1]
   });
   
   useEffect(() => {
@@ -58,16 +60,17 @@ export default function Apply({login}: {login: boolean}) {
     });
   }
 
-  const handleValueSubmit = (as: number, li: number, pr: number, re: number ) => {
-    setVals((previousState) => {
-      return {
-        ...previousState,
-        assets: as,
-        liabilities: li,
-        profit: pr,
-        revenue: re
+  const handleValueSubmit = (year1: number[], year2: number[], year3: number[], year4: number[], year5: number[]) => {
+    setVals(previousState => {
+      return { ...previousState,
+        step: 4,
+        year1: year1,
+        year2: year2,
+        year3: year3,
+        year4: year4,
+        year5: year5
       }
-    })
+    });
   }
 
   //const [site, setSite] = useState();
@@ -82,11 +85,10 @@ export default function Apply({login}: {login: boolean}) {
           {
             vals.step === 1 ?  <LocationForm submit = {handleLocationSubmit}/> :
                 vals.step === 2 ? <CompanyForm submit = {handleCompanySubmit}/> :
-                    <ValueForm />
+                    vals.step === 3 ? <ValueForm submit = {handleValueSubmit} /> :
+                        <CheckSuccess value={vals} />
           }
-          {"step: " + vals.step + " "}
-          {"" + vals.firstname + " " + vals.lastname + " " + vals.email + " " + vals.country + " " + vals.city + " " + vals.zip + " " + vals.street}
-          {" " + vals.creationdate + " " + vals.companyname}
+
         </div>
 
         <div className="flex-1 py-20">
