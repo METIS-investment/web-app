@@ -6,6 +6,7 @@ import Header from "./components/header";
 import Philosophy from './pages/philosophy';
 import Login from './pages/login';
 import { auth } from './pages/firebase';
+import Footer from "./components/footer";
 
 
 
@@ -26,13 +27,14 @@ function App() {
   return (
     <>
         <BrowserRouter basename="/">
-            <Header />
+            <Header  login={login}/>
             <Routes>
                 <Route index element={<Home />} />
                 <Route path="apply" element={<Apply login={login}/>} />
                 <Route path="philosophy" element={<Philosophy />} />
                 <Route path="login" element={<Login login={login} setLogin={setLogin} />} />
             </Routes>
+            <Footer/>
         </BrowserRouter>
     </>
   );
