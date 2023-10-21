@@ -11,14 +11,14 @@ const handleSignIn = (setLogin: any, nav: any) => {
       .then((userCredential) => {
         // Signed up 
         const user = userCredential.user;
-          // @ts-ignore
+        // @ts-ignore
           auth.currentUser.getIdToken(/* forceRefresh */ true).then(function(idToken) {
-              // Send token to your backend via HTTPS
-              console.log(idToken);
-              // ...
-          }).catch(function(error) {
-              // Handle error
-          });
+            // Send token to your backend via HTTPS
+            console.log(idToken)
+            // ...
+        }).catch(function(error) {
+            // Handle error
+        });
         setLogin(true);
         nav('/');
       })      
