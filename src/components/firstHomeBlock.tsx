@@ -4,7 +4,7 @@ const FirstBlock = () => {
     return (
 
         <div className="relative h-screen w-full">
-        <video className="absolute top-0 left-0 z-0 w-screen h-screen object-cover" autoPlay loop muted>
+        <video className="absolute top-0 left-0 z-0 w-screen h-screen object-cover" autoPlay loop muted playsInline>
             <source src="https://github.com/METIS-investment/resources/raw/main/web_video.mp4" type="video/mp4" />
         </video>
         <div className="absolute inset-0 bg-black opacity-20 z-5"></div>
