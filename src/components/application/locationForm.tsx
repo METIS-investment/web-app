@@ -210,9 +210,7 @@ export default function LocationForm({submit = (fn , ln, ma, co, st , ci, zi) =>
                     Next
                 </button>
             </div>
-            <div>
-                {"" + firstname + " " + lastname + " " + email + " " + country + " " + city + " " + zip + " " + street}
-            </div>
+            
 
         </>
     );
