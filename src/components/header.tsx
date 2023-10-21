@@ -18,7 +18,7 @@ const sites = [
 ]
 
 
-export default function Header() {
+export default function Header({login}: {login: boolean}) {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
     return (
@@ -53,7 +53,7 @@ export default function Header() {
 
                 <div className="hidden sm:flex sm:flex-1 sm:justify-end">
                         <a className="text-sm px-4 font-semibold leading-6 text-gray-900">
-                             <Link to="login">{"Log in"}</Link>
+                             <Link to="login">{login ? "Log out" : "Log in"}</Link>
                         </a>
                 </div>
                 <Dialog as="div" className="sm:hidden" open={mobileMenuOpen} onClose={setMobileMenuOpen}>
