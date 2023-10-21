@@ -1,7 +1,7 @@
 import CustomButton from "./customButton";
 const FirstBlock = () => {
     return (
-        <div className="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
+        <div className="mx-auto max-w-2xl sm:pt-32 lg:pt-56">
             <div className="text-center">
                 <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
                     Elevating Growth, Empowering Tomorrow.
