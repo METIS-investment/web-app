@@ -32,8 +32,8 @@ export default function Example({login, setLogin}: {login: boolean, setLogin: an
             <div className="space-y-6">
               <div>
                 <img
-                className="mx-auto h-10 w-auto"
-                src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
+                className="mx-auto w-28"
+                src="/icon.png"
                 alt="Your Company"
               />
               </div>
