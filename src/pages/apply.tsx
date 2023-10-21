@@ -1,8 +1,10 @@
+import { useNavigate } from "react-router-dom";
 import LocationForm from "../components/application/locationForm";
-import {useState} from "react";
+import {useEffect, useState} from "react";
 
 
-function Apply({login}: {login: boolean}) {
+export default function Apply({login}: {login: boolean}) {
+  const nav = useNavigate();
 
   const [vals, setVals] = useState({
     step: 1,
@@ -18,9 +20,13 @@ function Apply({login}: {login: boolean}) {
     profit: 0,
     revenue: 0
   });
-  if (!login) {
-    return (<>kiss my ass</>);
-  }
+  
+  useEffect(() => {
+    if (!login) {
+      nav('/login');
+    }
+  }, [login]);
+
 
 
   const handleLocationSubmit = (fn: string, ln: string, ma: string, co  :string, st :string, ci :string, zi:string) => {
@@ -70,4 +76,3 @@ function Apply({login}: {login: boolean}) {
   );
 }
 
-export default Apply;
