@@ -52,9 +52,9 @@ export default function Header() {
                 </div>
 
                 <div className="hidden sm:flex sm:flex-1 sm:justify-end">
-                    <a href="#" className="text-sm font-semibold leading-6 text-gray-900">
-                        Log in <span aria-hidden="true">&rarr;</span>
-                    </a>
+                        <a className="text-sm px-4 font-semibold leading-6 text-gray-900">
+                             <Link to="login">{"Log in"}</Link>
+                        </a>
                 </div>
                 <Dialog as="div" className="sm:hidden" open={mobileMenuOpen} onClose={setMobileMenuOpen}>
                     <div className="fixed inset-0 z-10" />
