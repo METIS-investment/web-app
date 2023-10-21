@@ -1,9 +1,62 @@
-import Example from "../components/form";
+import LocationForm from "../components/application/locationForm";
+import {useState} from "react";
 
+<<<<<<< Updated upstream
 function Apply({login}: {login: boolean}) {
   if (!login) {
     return (<>kiss my ass</>);
   }
+=======
+const handleSubmit = () => {
+
+}
+function Apply() {
+
+  const [vals, setVals] = useState({
+    step: 1,
+    firstname: "",
+    lastname: "",
+    email: "",
+    country: "",
+    street: "",
+    city: "",
+    zip: "",
+    assets: 0,
+    liabilities: 0,
+    profit: 0,
+    revenue: 0
+  });
+
+
+  const handleLocationSubmit = (fn: string, ln: string, ma: string, co  :string, st :string, ci :string, zi:string) => {
+    setVals(previousState => {
+      return { ...previousState,
+        firstname: fn,
+        lastname: ln,
+        email: ma,
+        country: co,
+        street: st,
+        city: ci,
+        zip: zi
+      }
+    });
+  }
+
+  const handleValueSubmit = (as: number, li: number, pr: number, re: number ) => {
+    setVals((previousState) => {
+      return {
+        ...previousState,
+        assets: as,
+        liabilities: li,
+        profit: pr,
+        revenue: re
+      }
+    })
+  }
+
+  //const [site, setSite] = useState();
+
+>>>>>>> Stashed changes
   return (
     <>
       <div className="flex">
@@ -11,11 +64,13 @@ function Apply({login}: {login: boolean}) {
         </div>
 
         <div className="flex-2 py-20">
-          <Example />
+          <LocationForm submit = {handleLocationSubmit}/>
+          {"" + vals.firstname + " " + vals.lastname + " " + vals.email + " " + vals.country + " " + vals.city + " " + vals.zip + " " + vals.street}
         </div>
 
         <div className="flex-1 py-20">
         </div>
+
       </div>
     </>
   );
