@@ -1,35 +1,38 @@
+import {useNavigate} from "react-router-dom";
 
 function Philosophy() {
+    const nav = useNavigate();
+
     return (
         <div className="flex-col mx-200 my-10 space-y-10 mt-32">
             <h1 className="text-center font-bold text-5xl">Investing in the Future of Small Businesses</h1>
             <h2 className="text-center text-3xl">Empower. Transform. Prosper.</h2>
-            <div className="flex justify-between items-center">
+            <div className="flex justify-between items-center space-x-8">
                 <div>
-                    <h3 className="font-bold text-2xl">Our Vision</h3>
+                    <h3 className="font-bold text-3xl">Our Vision</h3>
                     <p>Establish a transformative fund that bridges the financial gap for underserved entrepreneurs.</p>
                 </div>
                 <img src="/globe.png" className="w-72"/>
             </div>
-            <div className="flex justify-between items-center">
-                <img src="/globe.png" className="w-72"/>
+            <div className="flex justify-between items-center space-x-8">
+                <img src="/hurdles.png" className="w-72"/>
                 <div>
-                    <h3 className="font-bold text-2xl">The Challenge</h3><br/>
+                    <h3 className="font-bold text-3xl">The Challenge</h3><br/>
                     <a><a className="font-bold">Funding</a>: Small enterprises often face hurdles in acquiring necessary funding.</a><br/>
                     <a><a className="font-bold">Growth</a>: These businesses are crucial for local community growth.</a><br/>
                     <a><a className="font-bold">Independence</a>: They play a key role in fostering economic independence and job opportunities.</a>
                 </div>
             </div>
-            <div className="flex justify-between items-center">
+            <div className="flex justify-between items-center space-x-8">
                 <div>
-                    <h3 className="font-bold text-2xl">Dual Commitment</h3><br/>
+                    <h3 className="font-bold text-3xl">Dual Commitment</h3><br/>
                     <p><a className="font-bold">Capital Provision</a>: Deliver essential capital for expansion and innovation.</p><br/>
                     <p><a className="font-bold">Ethical Investment</a>: Adhere to the highest ethical and environmental standards.</p>
                 </div>
                 <img src="/scale.png" className="w-72"/>
             </div>
             <div className="flex justify-center">
-                <button className="bg-blue-400 p-4 rounded-md text-1xl">Join Us</button>
+                <button className="bg-blue-400 p-4 rounded-md text-1xl" onClick={() => { nav('/apply'); }}>Join Us</button>
             </div>
             <div className="text-center">
                 Introducing an innovative and impactful business concept that embodies both social responsibility and financial empowerment: Our vision is to establish a transformative fund that seeks to invest in the future of small businesses in developing nations, businesses too often overlooked by traditional banking institutions.
