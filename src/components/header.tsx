@@ -23,6 +23,11 @@ export default function Header({login}: {login: boolean}) {
 
     const nav = useNavigate();
 
+    const handleNavigation = (path: string) => {
+        nav(path);
+        setMobileMenuOpen(false);  // Close the mobile menu
+    };
+
     return (
         <header className="bg-white">
             <nav className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8" aria-label="Global">
@@ -81,21 +86,24 @@ export default function Header({login}: {login: boolean}) {
                         </div>
                         <div className="mt-6 flow-root">
                             <div className="-my-6 divide-y divide-gray-500/10">
-                                <div className="space-y-2 py-6">
-                                    {
-                                        sites.map((site) => (
-                                            <a key={site.name + "mobile"} href="#" className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">
-                                                <Link to={site.href}>{site.name}</Link>
-                                            </a>
-                                        ))
-                                    }
-                                </div>
+                                {
+                                    sites.map((site) => (
+                                        <a 
+                                            key={site.name + "mobile"} 
+                                            href="#" 
+                                            className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                                            onClick={() => handleNavigation(site.href)} // Use the handleNavigation function
+                                        >
+                                            {site.name}
+                                        </a>
+                                    ))
+                                }
                                 <div className="py-6">
                                     <a
-                                        href="#"
                                         className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                                        onClick={() => handleNavigation("login")}  // Use the handleNavigation function
                                     >
-                                        Log in
+                                        {login ? "Log out" : "Log in"}
                                     </a>
                                 </div>
                             </div>
