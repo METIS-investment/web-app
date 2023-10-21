@@ -5,9 +5,6 @@ function Home() {
     return (
         <>
             <FirstBlock />
-            <div className="text-center pt-10">
-                Here is what company owners say about us:
-            </div>
             <SecondBlock />
         </>
     );

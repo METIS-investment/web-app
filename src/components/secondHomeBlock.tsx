@@ -7,8 +7,11 @@ const stories = [
 ]
 const SecondBlock = () => {
     return (
-        <div className="mx-auto sm:py-48 lg:py-56">
-            <div className="flex justify-center px-32">
+        <div className="mx-auto sm:py-48 lg:py-10">
+            <div className="text-center pb-10 mt-6 text-lg leading-8 text-gray-600">
+                Here is what company owners say about us:
+            </div>
+            <div className="pb-20 flex justify-center px-32">
                 <div>
                     <StoryCard
                         motivation={stories[0].motivation}
