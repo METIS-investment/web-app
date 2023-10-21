@@ -13,6 +13,7 @@ function App() {
   var [login, setLogin] = React.useState(false);
 
   useEffect(() => {
+    
     auth.onAuthStateChanged((user) => {
       if (user) {
         setLogin(true);

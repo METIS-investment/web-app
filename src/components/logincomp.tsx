@@ -1,17 +1,20 @@
 import { GoogleAuthProvider, signInWithPopup, signInWithRedirect } from "firebase/auth";
 import { auth } from '../pages/firebase';
+import { useNavigate } from "react-router-dom";
 
-const handleSignIn = (setLogin: any) => {
+
+
+const handleSignIn = (setLogin: any, nav: any) => {
     const provider = new GoogleAuthProvider();
     signInWithPopup(auth, provider)
     
       .then((userCredential) => {
-        //console.log(userCredential);
         // Signed up 
         const user = userCredential.user;
         setLogin(true);
-      })
-      
+        nav('/');
+      })      
+
       .catch((error) => {
         const errorCode = error.code;
         const errorMessage = error.message;
@@ -19,8 +22,9 @@ const handleSignIn = (setLogin: any) => {
     });
 };
 
-
 export default function Example({login, setLogin}: {login: boolean, setLogin: any}) {
+  const nav = useNavigate();
+  
     return (
       <>
         <div className="flex min-h-full flex-1 flex-col justify-center pt-20 px-8 py-30 lg:px-8">
@@ -41,7 +45,7 @@ export default function Example({login, setLogin}: {login: boolean, setLogin: an
               <div>
                 <button
                 className="flex w-full justify-center rounded-md bg-indigo-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
-                 onClick={() => {handleSignIn(setLogin)}}>Sign In with Google
+                 onClick={() => {handleSignIn(setLogin, nav)}}>Sign In with Google
                 </button>
               </div>
             </div>
