@@ -11,6 +11,7 @@ import {
 } from '@heroicons/react/24/outline'
 import { ChevronDownIcon, PhoneIcon, PlayCircleIcon } from '@heroicons/react/20/solid'
 import {Link} from "react-router-dom";
+import { useMediaQuery } from 'react-responsive';
 
 const sites = [
     { name: "Statistics", href: "stats"},
@@ -19,14 +20,26 @@ const sites = [
 
 
 export default function Footer() {
+    const isMobile = useMediaQuery({ query: '(max-width: 768px)' });
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
     return (
-        <div className="flex sm:p-20 justify-center flex-wrap">
-            <a className="md:mx-3">METIS Investment</a>
-            <a className="md:mx-3">since 2023</a>
-            <a className="md:mx-3">Privacy Policy</a>
-            <a className="md:mx-3">Fairness Declaration</a>
+    <div>
+      {isMobile ? (
+        <div className="flex flex-col items-center sm:p-20 justify-center flex-wrap text-xs sm:text-base">
+        <a className="md:mx-3">METIS Investment</a>
+        <a className="md:mx-3">since 2023</a>
+        <a className="md:mx-3">Privacy Policy</a>
+        <a className="md:mx-3">Fairness Declaration</a>
         </div>
+      ) : (
+        <div className="flex sm:p-20 justify-center flex-wrap text-xs sm:text-base">
+        <a className="md:mx-3">METIS Investment</a>
+        <a className="md:mx-3">since 2023</a>
+        <a className="md:mx-3">Privacy Policy</a>
+        <a className="md:mx-3">Fairness Declaration</a>
+        </div>
+      )}
+    </div>
     )
 }
