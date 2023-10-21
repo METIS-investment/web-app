@@ -22,11 +22,11 @@ export default function Footer() {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
     return (
-        <div className="flex p-20 space-x-20 justify-center">
-            <a>METIS Investment</a>
-            <a>since 2023</a>
-            <a>Privacy Policy</a>
-            <a>Fairness Declaration</a>
+        <div className="flex sm:p-20 justify-center flex-wrap">
+            <a className="md:mx-3">METIS Investment</a>
+            <a className="md:mx-3">since 2023</a>
+            <a className="md:mx-3">Privacy Policy</a>
+            <a className="md:mx-3">Fairness Declaration</a>
         </div>
     )
 }
