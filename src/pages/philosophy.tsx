@@ -1,5 +1,7 @@
 import {useNavigate} from "react-router-dom";
 import { useMediaQuery } from 'react-responsive';
+import { Link } from 'react-router-dom';
+import CustomButton from "../components/customButton";
 
 function Philosophy() {
     const nav = useNavigate();
@@ -9,7 +11,7 @@ function Philosophy() {
         <div>
         {isMobile ? (
             <div className="px-3">
-<div className="flex-col mx-50 my-5 space-y-5 mt-16">
+            <div className="flex-col mx-50 my-5 space-y-5 mt-16">
             <h1 className="text-center font-bold text-3xl">Investing in the Future of Small Businesses</h1>
             <h2 className="text-center text-2xl">Empower. Transform. Prosper.</h2>
             <div className="flex flex-col justify-between items-center space-y-4">
@@ -36,7 +38,7 @@ function Philosophy() {
                 <img src="/scale.png" className="w-36"/>
             </div>
             <div className="flex justify-center">
-                <button className="bg-blue-400 p-2 rounded-md text-lg">Join Us</button>
+                <CustomButton text="Apply Now!" destination="apply" />
             </div>
         </div>
             </div>
@@ -70,9 +72,9 @@ function Philosophy() {
                     </div>
                     <img src="/scale.png" className="w-72"/>
                 </div>
-                <div className="flex justify-center">
-                    <button className="bg-blue-400 p-4 rounded-md text-1xl">Join Us</button>
-                </div>
+                <div className="mt-10 flex items-center justify-center gap-x-6">
+                <CustomButton text="Apply Now!" destination="apply" />
+            </div>
         </div>
       )}
     </div>
