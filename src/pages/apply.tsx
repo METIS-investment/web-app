@@ -1,6 +1,9 @@
 import Example from "../components/form";
 
-function Apply() {
+function Apply({login}: {login: boolean}) {
+  if (!login) {
+    return (<>kiss my ass</>);
+  }
   return (
     <>
       <div className="flex">

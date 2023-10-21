@@ -8,10 +8,10 @@ const handleSignIn = () => {
     signInWithRedirect(auth, provider);
 };
 
-function Login() {
+function Login({login, setLogin}: {login: boolean, setLogin: any}) {
     return (
         <>
-            <Example />
+            <Example login={login} setLogin={setLogin}/>
             {/* <button onClick={handleSignIn}>Sign In with Google</button> */}
         </>
     );
