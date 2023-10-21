@@ -1,16 +1,8 @@
 import LocationForm from "../components/application/locationForm";
 import {useState} from "react";
 
-<<<<<<< Updated upstream
-function Apply({login}: {login: boolean}) {
-  if (!login) {
-    return (<>kiss my ass</>);
-  }
-=======
-const handleSubmit = () => {
 
-}
-function Apply() {
+function Apply({login}: {login: boolean}) {
 
   const [vals, setVals] = useState({
     step: 1,
@@ -26,6 +18,9 @@ function Apply() {
     profit: 0,
     revenue: 0
   });
+  if (!login) {
+    return (<>kiss my ass</>);
+  }
 
 
   const handleLocationSubmit = (fn: string, ln: string, ma: string, co  :string, st :string, ci :string, zi:string) => {
@@ -56,7 +51,6 @@ function Apply() {
 
   //const [site, setSite] = useState();
 
->>>>>>> Stashed changes
   return (
     <>
       <div className="flex">
