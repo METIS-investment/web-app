@@ -8,7 +8,7 @@ const stories = [
 const SecondBlock = () => {
     return (
         <div className="mx-auto pb-20">
-            <div className="text-center pb-10 mt-6 text-lg leading-8 text-gray-600">
+            <div className="text-center pb-20 mt-6 text-2xl font-bold leading-8 text-gray-600">
                 Here is what company owners say about us:
             </div>
             <div className="pb-20 flex justify-center px-32">
