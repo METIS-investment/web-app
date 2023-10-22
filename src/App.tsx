@@ -7,6 +7,8 @@ import Philosophy from './pages/philosophy';
 import Login from './pages/login';
 import { auth } from './pages/firebase';
 import Footer from "./components/footer";
+import OneTimeInvestment from "./pages/one-time-investment";
+import Success from "./pages/success";
 
 
 
@@ -32,6 +34,8 @@ function App() {
                 <Route index element={<Home />} />
                 <Route path="apply" element={<Apply login={login}/>} />
                 <Route path="philosophy" element={<Philosophy />} />
+                <Route path="success" element={<Success />} />
+                <Route path="investment/one-time" element={<OneTimeInvestment login={login} />} />
                 <Route path="login" element={<Login login={login} setLogin={setLogin} />} />
             </Routes>
             <Footer/>

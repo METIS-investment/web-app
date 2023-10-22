@@ -14,7 +14,8 @@ import {Link, useNavigate} from "react-router-dom";
 
 const sites = [
     { name: "Statistics", href: "stats"},
-    { name: "Our Philosophy", href: "philosophy"}
+    { name: "Our Philosophy", href: "philosophy"},
+    { name: "Investment", href: "investment/one-time"}
 ]
 
 
