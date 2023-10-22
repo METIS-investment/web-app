@@ -13,8 +13,9 @@ import { ChevronDownIcon, PhoneIcon, PlayCircleIcon } from '@heroicons/react/20/
 import {Link, useNavigate} from "react-router-dom";
 
 const sites = [
-    { name: "Statistics", href: "statistics"},
-    { name: "Our Philosophy", href: "philosophy"}
+    { name: "Our Philosophy", href: "philosophy"},
+    { name: "Investment", href: "investment/one-time"},
+    { name: "Statistics", href: "statistics"}
 ]
 
 
