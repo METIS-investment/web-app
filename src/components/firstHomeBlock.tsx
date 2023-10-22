@@ -1,11 +1,19 @@
 import CustomButton from "./customButton";
+import { useEffect } from 'react';
 
 const FirstBlock = () => {
+    useEffect(() => {
+        const videoElement = document.getElementById('myVideo') as HTMLVideoElement;
+        if (videoElement) {
+            videoElement.play();
+        }
+    }, []);
+
     return (
 
         <div className="relative h-screen w-full">
-        <video className="absolute top-0 left-0 z-0 w-screen h-screen object-cover" autoPlay loop muted>
-            <source src="https://github.com/METIS-investment/resources/raw/main/web_video.mp4" type="video/mp4" />
+        <video id="myVideo" className="absolute top-0 left-0 z-0 w-screen h-screen object-cover" autoPlay loop muted>
+        <source src="https://github.com/METIS-investment/resources/raw/main/web_video.mp4" type="video/mp4" />
         </video>
         <div className="absolute inset-0 bg-black opacity-20 z-5"></div>
         <div className="absolute inset-0 flex flex-col justify-center text-center z-10 mx-auto max-w-2xl sm:pt-32 lg:pt-56">
