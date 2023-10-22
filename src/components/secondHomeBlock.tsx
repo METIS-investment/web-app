@@ -1,8 +1,8 @@
 import StoryCard from "./storyCard";
 const stories = [
-    {id: 2, name: "Joe CEO", description: "CEO of X", motivation: "Ich bin sehr motiviert", imgsrc: "https://img.freepik.com/fotos-kostenlos/bauarbeiter-im-freien-tragen-schutzausruestung_23-2148784050.jpg?w=1380&t=st=1697835445~exp=1697836045~hmac=ce2dd4ca8a8926e37e1e71005b563aadf760f9a095c0d86ce00b3582fb60ccba"},
-    {id: 3, name: "Tom Logo", description: "!CEO", motivation: "Ich war nicht motiviert bis ich bei METIS war", imgsrc: "https://img.freepik.com/fotos-kostenlos/landarbeiter-der-mit-mais-aufwirft_23-2148761810.jpg?w=1380&t=st=1697835394~exp=1697835994~hmac=ccfdea5264f5189afa4ce987609b80d493e1b35adef2d394116d7b2fe3f93ab6"},
-    {id: 4, name: "Tom Logo", description: "Owner of Pottery Shop", motivation: "Ich konnte meine eigene Töpferei aufbauen!", imgsrc: "https://img.freepik.com/fotos-kostenlos/mittlerer-schuss-der-smiley-geschaeftsfrau_23-2148692818.jpg?t=st=1697836069~exp=1697836669~hmac=3b9e0aa2e9cc058efec5d7e958212b1aaff95eff2e4dcf96e33cb1d20e54ed97"}
+    {id: 2, name: "Carlos Silva", description: "CEO of X", motivation: "Thanks to Metis, our small construction company achieved remarkable growth", imgsrc: "https://img.freepik.com/fotos-kostenlos/bauarbeiter-im-freien-tragen-schutzausruestung_23-2148784050.jpg?w=1380&t=st=1697835445~exp=1697836045~hmac=ce2dd4ca8a8926e37e1e71005b563aadf760f9a095c0d86ce00b3582fb60ccba"},
+    {id: 3, name: "Amina Ngozi", description: "Founder of now!", motivation: "Metis played a crucial role in our journey, helping our small farm thrive and prosper to significant success.", imgsrc: "https://img.freepik.com/fotos-kostenlos/landarbeiter-der-mit-mais-aufwirft_23-2148761810.jpg?w=1380&t=st=1697835394~exp=1697835994~hmac=ccfdea5264f5189afa4ce987609b80d493e1b35adef2d394116d7b2fe3f93ab6"},
+    {id: 4, name: "Mei Chen", description: "Owner", motivation: "Our small pottery company now thrives as a remarkable success, thanks to invaluable guidance and support.", imgsrc: "https://img.freepik.com/fotos-kostenlos/mittlerer-schuss-der-smiley-geschaeftsfrau_23-2148692818.jpg?t=st=1697836069~exp=1697836669~hmac=3b9e0aa2e9cc058efec5d7e958212b1aaff95eff2e4dcf96e33cb1d20e54ed97"}
 
 ]
 const SecondBlock = () => {
