@@ -52,7 +52,7 @@ export default function Header({login}: {login: boolean}) {
                 <div className="hidden sm:flex sm:flex-1 sm:justify-center">
                 {
                     sites.map((site) => (
-                        <a key={site.name + "normal"} href="#" className="text-sm px-4 font-semibold leading-6 text-gray-900">
+                        <a key={site.name + "normal"} className="text-sm px-4 font-semibold leading-6 text-gray-900">
                              <Link to={site.href}>{site.name}</Link>
                         </a>
                     ))
@@ -91,7 +91,6 @@ export default function Header({login}: {login: boolean}) {
                                     sites.map((site) => (
                                         <a 
                                             key={site.name + "mobile"} 
-                                            href="#" 
                                             className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                                             onClick={() => handleNavigation(site.href)} // Use the handleNavigation function
                                         >
